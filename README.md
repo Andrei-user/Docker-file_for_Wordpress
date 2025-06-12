@@ -26,6 +26,7 @@ WORDPRESS_DB_PASSWORD=wp_pass
 
 WORDPRESS_PORT=4000
 PHPMYADMIN_PORT=4001
+```
 
 ## Особености
 
@@ -35,13 +36,10 @@ phpMyAdmin автоматически подключается к MySQL, без 
 
 Добавлен healthcheck для MySQL — WordPress и phpMyAdmin начнут работать только после полной инициализации базы данных.
 
-
-
 ## Запуск
 Создайте .env файл рядом с docker-compose.yml
 
 Запустите проект:
-
 
 ``` docker-compose up -d ```
 
