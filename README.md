@@ -52,3 +52,19 @@ phpMyAdmin: http://localhost:4001
 ## Остановка
 
 ``` docker-compose down ```
+
+
+## Reverse Proxy и безопасность
+
+### NGINX (nginx:1.27) настроен как reverse proxy.
+
+/ и ``/wp-admin`` ведут на WordPress, ``/phpmyadmin`` — на phpMyAdmin.
+
+Внешне открыт только порт 80 (HTTP).
+
+Все остальные сервисы доступны только внутри сети Docker.
+
+phpMyAdmin работает без ручного ввода хоста через PMA_ABSOLUTE_URI.
+
+## Данные и надёжность
+WordPress и MySQL используют тома: ``./data/wp`` , ``./data/mysql``
